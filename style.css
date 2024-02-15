@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --LightRed: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --LightGrey: hsl(0, 0%, 86%);
+  --SmokeyGrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+}
+
+body {
+  background-color: var(--Offwhite);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  padding: 20px;
+  background-color: var(--White);
+  width: 700px;
+  border-radius: 20px;
+  border-radius: 0 0 30% 0;
+}
+
+form {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+form input[type="number"] {
+  color: var(--Offblack);
+  width: 150px;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid var(--SmokeyGrey);
+  border-radius: 5px;
+}
+
+form input[type="number"]:hover {
+  cursor: pointer;
+}
+
+form input[type="number"]:focus {
+  border: 1px solid var(--Purple);
+  outline: 1px solid var(--Purple);
+  caret-color: var(--Purple);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.invalid-input {
+  border-color: var(--LightRed) !important;
+  outline-color: var(--LightRed) !important;
+}
+
+.invalid-label {
+  color: var(--LightRed) !important;
+}
+
+.period-label {
+  color: var(--SmokeyGrey);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.invalid-day,
+.invalid-month,
+.invalid-year {
+  color: var(--LightRed);
+}
+
+.line {
+  width: 100%;
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -34px;
+  width: 70px;
+  height: 70px;
+  background-color: var(--Purple);
+  border-radius: 50%;
+}
+
+.icons:hover {
+  cursor: pointer;
+  background-color: var(--Offblack);
+}
+
+.display {
+  margin-top: 30px;
+  font-size: 72px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--Offblack);
+}
+
+.dash {
+  color: var(--Purple);
+  padding-right: 10px;
+  letter-spacing: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 370px;
+  }
+
+  form input[type="number"] {
+    width: 100px;
+  }
+
+  .icons {
+    margin-right: 125px;
+  }
+
+  .display {
+    font-size: 56px;
+  }
+}

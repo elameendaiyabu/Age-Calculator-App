@@ -4,8 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link rel="icon" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Age Calculator App</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <!-- form -->
+      <form action="">
+        <!-- day -->
+        <div class="field">
+          <label for="day" class="period-label">day</label>
+          <p class="input-field">
+            <input type="number" name="day" id="day" placeholder="DD" />
+          </p>
+          <p class="invalid-day"></p>
+        </div>
+        <!-- day -->
+        <!-- month -->
+        <div class="field">
+          <label for="month" class="period-label">month</label>
+          <p class="input-field">
+            <input type="number" name="month" id="month" placeholder="MM" />
+          </p>
+          <p class="invalid-month"></p>
+        </div>
+        <!-- month -->
+        <!-- year -->
+        <div class="field">
+          <label for="year" class="period-label">year</label>
+          <p class="input-field">
+            <input type="number" name="year" id="year" placeholder="YYYY" />
+          </p>
+          <p class="invalid-year"></p>
+        </div>
+        <!-- year -->
+      </form>
+      <!-- form -->
+      <div class="line">
+        <hr />
+        <div class="icons" id="btn">
+          <img src="./images/icon-arrow.svg" alt="icon" />
+        </div>
+      </div>
+
+      <!-- display -->
+      <div class="display">
+        <p><span class="dash" id="year-display">--</span>years</p>
+        <p><span class="dash" id="month-display">--</span>months</p>
+        <p><span class="dash" id="day-display">--</span>days</p>
+      </div>
+      <!-- display -->
+    </div>
+  </body>
   <script src="index.js"></script>
 </html>
